@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+
+@font-face {
+  font-family: "pricedown";
+  src: url("../font/pricedown.otf") format("opentype");
+}
+ 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden hidden;
+}
+
+.video-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .h1-img {
+      position: relative;
+
+      z-index: 2;
+      background-color: black;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+
+    .h2-img {position:fixed;
+      bottom: -1%;
+        right:0;
+        z-index:3;
+        overflow:hidden;
+        visibility:visible !important;
+      }
+
+      
+      .item-1, 
+      .item-2, 
+      .item-3 {
+  bottom: 2%;
+  width: 50%;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  z-index: 999999;
+  padding-bottom: 1%;
+	font-family: 'Barlow', sans-serif;
+      }
+      
+      .item-1{
+        animation-name: anim-1;
+      }
+      
+      .item-2{
+        animation-name: anim-2;
+      }
+      
+      .item-3{
+        animation-name: anim-3;
+      }
+      
+      @keyframes anim-1 {
+        0%, 8.3% { left: -100%; opacity: 0; }
+        8.3%,25% { left: 25%; opacity: 1; }
+        33.33%, 100% { left: 110%; opacity: 0; }
+      }
+      
+      @keyframes anim-2 {
+        0%, 33.33% { left: -100%; opacity: 0; }
+        41.63%, 58.29% { left: 25%; opacity: 1; }
+        66.66%, 100% { left: 110%; opacity: 0; }
+      }
+      
+      @keyframes anim-3 {
+        0%, 66.66% { left: -100%; opacity: 0; }
+        74.96%, 91.62% { left: 25%; opacity: 1; }
+        100% { left: 110%; opacity: 0; }
+      }
+
+.title {
+  color: white;
+  text-transform: uppercase;
+  font-family: "pricedown";
+  font-size: 60px;
+}
+
+.footer {
+  position:absolute;
+  background-color: black;
+  padding-top: 154px;
+  
+  bottom:0;
+  
+  width:100%;
+  
+
+  z-index: 99999;
+}
